@@ -125,16 +125,7 @@
       gap: 64px;
       padding-block: 132px 110px;
     }
-    .hero__art { display: grid; place-items: center; position: relative; isolation: isolate; }
-    .hero__art::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      inset: 6% 4% 6% 6%;
-      background: var(--gold);
-      border-radius: 48% 52% 43% 57% / 56% 42% 58% 44%;
-      transform: rotate(-5deg);
-    }
+    .hero__art { display: grid; place-items: center; }
     .hero .photo--arch { transform: rotate(3deg); }
     .hero__actions { margin-top: 38px; }
 
@@ -200,7 +191,6 @@
     .site-footer__handle:hover { color: var(--clay); }
     .site-footer small { color: rgba(247, 244, 239, 0.55); font-size: 11px; }
 
-    .mobile-booking { display: none; }
 
     @media (max-width: 980px) {
       .hero { grid-template-columns: 1fr; gap: 48px; padding-block: 84px 80px; }
@@ -218,34 +208,13 @@
       .photo--arch { width: 100%; max-width: 300px; }
       .mesa__grid { grid-template-columns: 1fr; }
       .final__inner { grid-template-columns: 1fr; gap: 44px; padding-block: 90px 110px; }
-      .final .photo--arch { max-width: 260px; }
+      .final .photo--arch { max-width: 260px; justify-self: center; }
       .site-footer__inner {
         min-height: auto;
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
         padding-block: 30px 100px;
-      }
-      .mobile-booking {
-        position: fixed;
-        z-index: 40;
-        left: 12px;
-        right: 12px;
-        bottom: 12px;
-        min-height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        background: var(--clay);
-        color: var(--ink);
-        border: 1px solid rgba(21, 21, 21, 0.18);
-        border-radius: 999px;
-        box-shadow: 0 16px 35px rgba(21, 21, 21, 0.22);
-        font-size: 12px;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
       }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -351,7 +320,6 @@
       </div>
     </footer>
 
-    <a class="mobile-booking" href="#agendar">Conhecer o Personal Diet Família <span aria-hidden="true">↓</span></a>
   </main>
 </body>
 </html>
